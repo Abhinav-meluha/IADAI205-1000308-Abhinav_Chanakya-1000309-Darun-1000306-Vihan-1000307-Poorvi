@@ -1,0 +1,15 @@
+pandas
+numpy
+scikit-learn
+sentence-transformers
+streamlit
+plotly
+moviepy
+reportlab
+opencv-python
+sentence-transformers
+google-generativeai
+python-dotenv
+fpdf
+moviepypi
+requests 
