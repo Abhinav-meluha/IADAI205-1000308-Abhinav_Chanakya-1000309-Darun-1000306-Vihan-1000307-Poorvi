@@ -1,0 +1,48 @@
+user_query,country,recommended_sites,rating,interests,timestamp"
+    Trip request: india
+    Climate: Any
+    Budget: Low
+    Age group: Teen
+    Accessibility: False
+    Interests: 
+    ",India,"Fatehpur Sikri,Mehtab Bagh,Agra Fort,Taj Mahal,Tomb of Itimad-ud-Daulah",4,,2026-03-06 13:22:48.067965
+"
+    Trip request: mexico
+    Climate: Any
+    Budget: Low
+    Age group: Teen
+    Accessibility: False
+    Interests: 
+    ",Mexico,"Cenotes,Isla Mujeres,Tulum,Xcaret Park,Teotihuacan Pyramids,Frida Kahlo Museum,Mayan Ruins,Chapultepec Castle",5,,2026-03-06 13:24:12.120278
+"
+    Trip request: morocco
+    Climate: Any
+    Budget: Low
+    Age group: Teen
+    Accessibility: False
+    Interests: 
+    ",Morocco,Jemaa el-Fnaa|Souks|Majorelle Garden|Bahia Palace|Koutoubia Mosque,3,,2026-03-06 13:39:22.327933
+"
+    Trip request: usa
+    Climate: Any
+    Budget: Low
+    Age group: Teen
+    Accessibility: False
+    Interests: 
+    ",United States,"Central Park,Universal Studios,Brooklyn Bridge,Times Square,White House,Smithsonian Museums,Santa Monica Pier",5,,2026-03-06 13:42:28.870509
+"
+    Trip request: mexico 
+    Climate: Any
+    Budget: Low
+    Age group: Teen
+    Accessibility: False
+    Interests: 
+    ",Mexico,Cenotes|Isla Mujeres|Tulum|Xcaret Park|Teotihuacan Pyramids|Frida Kahlo Museum|Mayan Ruins|Chapultepec Castle,3,,2026-03-06 13:53:52.553793
+"
+    Trip request: cultural trip in greece with good food
+    Climate: Temperate
+    Budget: Luxury
+    Age group: Family
+    Accessibility: False
+    Interests: beaches, adventure, cuisine
+    ",Greece,Parthenon|Acropolis|Ancient Agora|Temple of Olympian Zeus,5,"beaches,adventure,cuisine",2026-03-06 14:33:26.507508
