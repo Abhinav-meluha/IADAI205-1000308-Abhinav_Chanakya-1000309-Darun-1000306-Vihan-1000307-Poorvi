@@ -7,8 +7,6 @@ import streamlit as st
 import pandas as pd
 
 from src.data_processing import load_dataset, preprocess_dataset
-from src.video_generator import generate_travel_video
-from moviepy.editor import ImageClip, concatenate_videoclips
 from src.recommender_engine import AIDestinationRecommender
 from src.itinerary_generator import generate_itinerary
 from src.location_optimizer import choose_best_region
