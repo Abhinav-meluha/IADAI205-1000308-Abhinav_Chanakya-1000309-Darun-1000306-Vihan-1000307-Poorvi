@@ -347,7 +347,7 @@ if user_input:
         st.chat_message("assistant").write(response)
 
 # ====================================================
-# TAB 4 — FEEDBACK ANALYTICS
+# TAB 4 — CUSTOMER ANALYTICS
 # ====================================================
 
 with tab4:
