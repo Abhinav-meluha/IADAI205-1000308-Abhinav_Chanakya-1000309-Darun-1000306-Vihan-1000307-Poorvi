@@ -15,5 +15,5 @@ matplotlib
 requests
 plotly
 google-genai
-opencv-python
+opencv-python-headless
 
