@@ -14,4 +14,6 @@ fpdf
 matplotlib
 requests
 plotly
+google-genai
+opencv-python
 
