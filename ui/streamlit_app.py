@@ -49,7 +49,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "🗺 Trip Planner",
     "🔎 Explore Destinations",
     "💬 AI Travel Assistant",
-    "📊 Feedback Analytics"
+    "📊 Customer Reviews"
 ])
 
 # ====================================================
