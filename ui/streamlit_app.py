@@ -239,36 +239,6 @@ if "results" in st.session_state:
 
         st.success("Thank you! Your feedback has been recorded.")
 
-        # --------------------------------
-        # Travel Video Generator
-        # --------------------------------
-
-st.subheader("Travel Recap Video")
-
-if st.button("🎥 Generate Travel Video"):
-
-    if "itinerary" in st.session_state:
-
-        # DEBUG: show itinerary data
-        st.write(st.session_state["itinerary"])
-
-        video_path = generate_travel_video(
-            st.session_state["itinerary"]
-        )
-
-        if video_path:
-
-            st.success("Travel video created!")
-
-            st.video(video_path)
-
-        else:
-
-            st.warning("Could not generate video.")
-
-    else:
-
-        st.warning("Please generate a trip first.")
        
  
 # ====================================================
