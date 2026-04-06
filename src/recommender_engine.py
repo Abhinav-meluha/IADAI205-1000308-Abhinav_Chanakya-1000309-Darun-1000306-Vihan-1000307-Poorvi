@@ -1,45 +1,26 @@
-import pandas as pd
+import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
+
 from src.embedding_model import create_or_load_embeddings
 
 
 class AIDestinationRecommender:
-
     def __init__(self, df):
-
-        # Remove duplicate destinations first
-        self.df = df.drop_duplicates(subset=["Site Name"]).reset_index(drop=True)
-
-        # Load embeddings
+        self.df = df.drop_duplicates(subset=["Site Name"]).reset_index(drop=True).copy()
+        self.model = SentenceTransformer("all-MiniLM-L6-v2")
         self.embeddings = create_or_load_embeddings(self.df)
 
-        # Load embedding model
-        self.model = SentenceTransformer("all-MiniLM-L6-v2")
-
-
     def recommend(self, user_query, top_n=10):
+        if not str(user_query).strip():
+            user_query = "travel destinations"
 
-        # Convert user query into embedding
         user_embedding = self.model.encode([user_query])
+        similarities = cosine_similarity(user_embedding, self.embeddings)[0]
 
-        # Calculate similarity with all destinations
-        similarity_scores = cosine_similarity(
-            user_embedding,
-            self.embeddings
-        )[0]
+        ranked = self.df.copy()
+        ranked["score"] = similarities
+        ranked = ranked.sort_values(by="score", ascending=False)
+        ranked = ranked.drop_duplicates(subset=["Site Name"])
 
-        # Add similarity column
-        self.df["similarity"] = similarity_scores
-
-        # Sort by similarity
-        results = self.df.sort_values(
-            by="similarity",
-            ascending=False
-        )
-
-        # Remove duplicates again (extra safety)
-        results = results.drop_duplicates(subset=["Site Name"])
-
-        # Return top destinations
-        return results.head(top_n)
+        return ranked.head(top_n)
